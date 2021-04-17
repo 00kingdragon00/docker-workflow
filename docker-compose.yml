@@ -1,20 +1,11 @@
-version: '3'
-services: 
-    web-react-app:
-        build:
-            context: .
-            dockerfile: Dockerfile.dev
-        ports: 
-            - "3000:3000"
-        volumes: 
-            - /app/node_modules
-            - .:/app
-    # tests-web:
-    #     build:
-    #         context: .
-    #         dockerfile: Dockerfile.dev
-    #     volumes: 
-    #         - /app/node_modules
-    #         - .:/app
-    #     command: ["npm", "run", "test"]
-    
+version: "3.8"
+services:
+  web-angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 4200:4200
+    volumes:
+      - /app/node_modules
+      - ./:/app
