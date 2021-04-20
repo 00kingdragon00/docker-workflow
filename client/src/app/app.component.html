@@ -1,0 +1,16 @@
+<h3>Fib Calculator</h3>
+
+<form [formGroup]="valueForm" (ngSubmit)="handleSubmit(valueForm)">
+  <label for="">Enter your index: </label>
+  <input formControlName="index" type="text" />
+  <button type="submit" [disabled]="valueForm.invalid">Submit</button>
+</form>
+
+<h3>Indexex I have seen:</h3>
+<p *ngIf="state.seenIndexes && state.seenIndexes.length > 0">
+  {{ getIndex() }}
+</p>
+<h3>Calulated Values</h3>
+<div *ngFor="let value of state.values; let i = index">
+  From Index {{ i }} I calulated {{ value }}
+</div>

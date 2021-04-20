@@ -6,6 +6,5 @@ RUN npm install -g @angular/cli
 COPY ./package.json ./
 RUN npm install
 
-COPY ./ ./
 
 CMD ["npm", "run", "start"]
